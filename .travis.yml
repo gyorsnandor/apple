@@ -1,10 +1,9 @@
 language: c
 
-arch:
-  - amd64
-  - arm64-graviton2
-
+arch: arm64-graviton2
+virt: vm
 os: linux
+dist: focal
 
 compiler:
   - gcc
