@@ -1,0 +1,14 @@
+language: c
+
+arch:
+  - amd64
+
+compiler:
+  - gcc
+script:
+  - sudo apt update && sudo apt upgrade -y
+  - sudo apt install -y software-properties-common ufw build-essential git tree perl libperl-dev libgd3 libgd-dev libgeoip1 libgeoip-dev geoip-bin libxml2 libxml2-dev libxslt1.1 libxslt1-dev
+  - wget https://nginx.org/download/nginx-1.19.0.tar.gz && tar zxvf nginx-1.19.0.tar.gz
+  - cd ~/nginx-1.19.0
+  - ./configure
+  - make
